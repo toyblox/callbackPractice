@@ -120,12 +120,12 @@ contains(names, 'Colt', function(result){
 
     var uniq = function(arr, cb) {
       var newUniq = [];
-      for(var i in arr) {
+      for(var i = 0; i < arr.length; i++) {
         if (newUniq.indexOf(arr[i]) === -1) {
           newUniq.push(arr[i]);
         }
       }
-      return newUniq;
+      cb(newUniq);
     }
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
